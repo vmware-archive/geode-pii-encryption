@@ -1,0 +1,8 @@
+rootProject.name = 'GeodeEncryption'
+include 'crypto', 'model', 'common','encryption'
+project(':crypto')
+project(':model')
+project(':common')
+project(':encryption')
+
+
