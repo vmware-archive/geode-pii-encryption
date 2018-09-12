@@ -12,14 +12,14 @@ public class DataUtil {
     private static Random random = new Random();
 
 
-    public static Customer generateRandomCustomer(){
+    public static Customer createRandomCustomer() {
 
         Customer customer=new Customer();
         customer.setId(UUID.randomUUID().toString());
         customer.setFirstName("fName-"+randomChars(5 + new Random().nextInt(5)));
         customer.setLastName("lName-"+randomChars(5 + new Random().nextInt(5)));
         customer.setMiddleName("mName-"+randomChars(5 + new Random().nextInt(5)));
-        customer.setDisplayName("dName-"+randomChars(5 + new Random().nextInt(5)));
+        customer.setUserName("uName-"+randomChars(5 + new Random().nextInt(5)));
         customer.setGender(random.nextBoolean()? "M" : "F");
         customer.setCreatedDate(new Date().getTime());
         customer.setLastUpdatedDate(new Date().getTime());

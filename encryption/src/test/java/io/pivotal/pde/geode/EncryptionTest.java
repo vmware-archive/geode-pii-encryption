@@ -29,7 +29,7 @@ public class EncryptionTest {
     @Test
     public void testEncryptDecrypt1() {
 
-        Customer customer = DataUtil.generateRandomCustomer();
+        Customer customer = DataUtil.createRandomCustomer();
         String key=customer.getId();
         String firstName="test1-firstName";
         String lastName="test2LastName";
@@ -79,7 +79,7 @@ public class EncryptionTest {
     @Test
     public void testQueryByFirstName() {
 
-        Customer customer = DataUtil.generateRandomCustomer();
+        Customer customer = DataUtil.createRandomCustomer();
         String key=customer.getId();
         String firstName="zcfirstName";
         String lastName="ccLastName";

@@ -21,20 +21,14 @@ public class EncryptionClient {
             @Override
             public void run(String... arg0) throws Exception {
 
-                Customer customer1 = DataUtil.generateRandomCustomer();
-                Customer customer2 = DataUtil.generateRandomCustomer();
+                Customer customer1 = DataUtil.createRandomCustomer();
+                Customer customer2 = DataUtil.createRandomCustomer();
 
                 geodeService.putCustomerData(customer1);
                 geodeService.putCustomerData(customer2);
-/*
-                // Bulk loading customer data
-                for (int i=0;i<10;i++) {
-                    Customer customer = DataUtil.generateRandomCustomer();
-                    geodeService.putCustomerData(customer);
-                }
-*/
 
-            geodeService.queryAllCreditCards();
+                geodeService.queryAllCreditCards();
+
             }
 
         };
@@ -47,5 +41,6 @@ public class EncryptionClient {
 start locator
 start server --cache-xml-file=/opt/gemfire/config/cache.xml
 
+query --query="select id, c.firstName, c.gender, c.creditCards[0].ccardNumber, c.creditCards[0].cvvCode, c.addresses[0].primary from /Customer c where c.id='66901a9f-3231-4baf-afef-69593f724046'"
 
  */

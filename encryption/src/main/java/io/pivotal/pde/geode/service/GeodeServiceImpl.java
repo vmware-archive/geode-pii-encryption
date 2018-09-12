@@ -49,7 +49,7 @@ public class GeodeServiceImpl implements IGeodeService {
         customerRegion=cache.getRegion("/Customer");
         qs=cache.getQueryService();
         localQS = cache.getLocalQueryService();
-        cryptorService= CryptoUtil.getCipher(CipherType.AES, "0123456789012345".getBytes(), "01234567890123456789012345678901".getBytes());
+        cryptorService= CryptoUtil.getCipher(CipherType.AES, "1234567890123456".getBytes(), "12345678901234567890123456789012".getBytes());
 
     }
 

@@ -13,7 +13,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Base64;
 
-public class CryptoAES256Impl implements ICryptoService {
+public class CryptoAESImpl implements ICryptoService {
 
     private byte[] iv;
 
@@ -32,7 +32,7 @@ public class CryptoAES256Impl implements ICryptoService {
      * @param salt
      * @param keyIterations
      */
-    public CryptoAES256Impl(String key, String salt, Integer keyIterations)  {
+    public CryptoAESImpl(String key, String salt, Integer keyIterations)  {
         try {
             if (StringUtils.isEmpty( null)){
                 throw new RuntimeException("The key field cannot be null ");
@@ -53,7 +53,7 @@ public class CryptoAES256Impl implements ICryptoService {
     }
 
 
-    public CryptoAES256Impl(byte[] iv, byte[] secretKey)  {
+    public CryptoAESImpl(byte[] iv, byte[] secretKey)  {
         this.iv = iv;
         this.secret = new SecretKeySpec(secretKey, "AES");
     }

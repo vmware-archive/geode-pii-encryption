@@ -2,8 +2,6 @@ package io.pivotal.pde.geode.encryption.model;
 
 import io.pivotal.pde.geode.encryption.annotation.EnableEncryption;
 
-import java.util.Date;
-
 public class CreditCard  {
 
 

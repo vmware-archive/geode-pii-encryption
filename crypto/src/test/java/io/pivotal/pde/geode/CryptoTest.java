@@ -12,10 +12,10 @@ public class CryptoTest {
 
 
     @Test
-    public void testEncryptDecrypt1() {
+    public void testEncryptName() {
 
         ICryptoService cryptoService = CryptoUtil.getCipher(CipherType.AES, "0123456789012345".getBytes(), "01234567890123456789012345678901".getBytes());
-        String value = "nsarvi@gmail.com";
+        String value = "Gideon and Niranjan";
 
         String encryptedValue = cryptoService.encrypt(value);
         String decryptedValue = cryptoService.decrypt(encryptedValue);
@@ -23,10 +23,10 @@ public class CryptoTest {
     }
 
     @Test
-    public void testEncryptDecrypt2() {
+    public void testEncryptAddress() {
         ICryptoService cryptoService = CryptoUtil.getCipher(CipherType.AES, "0123456789012345".getBytes(), "01234567890123456789012345678901".getBytes());
 
-        String value = "gideon.low@pivotal.io";
+        String value = "222, Main Street, Apt 202";
 
         String encryptedValue = cryptoService.encrypt(value);
         String decryptedValue = cryptoService.decrypt(encryptedValue);

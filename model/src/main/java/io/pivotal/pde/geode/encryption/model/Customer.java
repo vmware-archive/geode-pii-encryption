@@ -20,7 +20,7 @@ public class Customer  {
     @EnableEncryption
     protected String lastName;
     @EnableEncryption
-    protected String displayName;
+    protected String userName;
 
     protected String gender;
     protected Long createdDate;
@@ -65,12 +65,12 @@ public class Customer  {
         this.lastName = lastName;
     }
 
-    public String getDisplayName() {
-        return displayName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getGender() {
@@ -120,7 +120,7 @@ public class Customer  {
                 ", firstName='" + firstName + '\'' +
                 ", middleName='" + middleName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", displayName='" + displayName + '\'' +
+                ", userName='" + userName + '\'' +
                 ", gender='" + gender + '\'' +
                 ", createdDate=" + createdDate +
                 ", lastUpdatedDate=" + lastUpdatedDate +

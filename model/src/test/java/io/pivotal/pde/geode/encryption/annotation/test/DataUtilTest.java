@@ -17,7 +17,7 @@ public class DataUtilTest {
     @Test
     public void TestCustomer() {
 
-        Customer customer=DataUtil.generateRandomCustomer();
+        Customer customer=DataUtil.createRandomCustomer();
 
         assertTrue(customer.getId() != null ? true : false);
         assertThat(customer.getFirstName(), equalTo(customer.getFirstName()));
