@@ -74,4 +74,35 @@ public class CustomerAddress {
     public void setPrimary(boolean primary) {
         this.primary = primary;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CustomerAddress that = (CustomerAddress) o;
+
+        if (isPrimary() != that.isPrimary()) return false;
+        if (getAddressId() != null ? !getAddressId().equals(that.getAddressId()) : that.getAddressId() != null)
+            return false;
+        if (getAddressLine1() != null ? !getAddressLine1().equals(that.getAddressLine1()) : that.getAddressLine1() != null)
+            return false;
+        if (getAddressLine2() != null ? !getAddressLine2().equals(that.getAddressLine2()) : that.getAddressLine2() != null)
+            return false;
+        if (getCity() != null ? !getCity().equals(that.getCity()) : that.getCity() != null) return false;
+        if (getState() != null ? !getState().equals(that.getState()) : that.getState() != null) return false;
+        return getZip() != null ? getZip().equals(that.getZip()) : that.getZip() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getAddressId() != null ? getAddressId().hashCode() : 0;
+        result = 31 * result + (getAddressLine1() != null ? getAddressLine1().hashCode() : 0);
+        result = 31 * result + (getAddressLine2() != null ? getAddressLine2().hashCode() : 0);
+        result = 31 * result + (getCity() != null ? getCity().hashCode() : 0);
+        result = 31 * result + (getState() != null ? getState().hashCode() : 0);
+        result = 31 * result + (getZip() != null ? getZip().hashCode() : 0);
+        result = 31 * result + (isPrimary() ? 1 : 0);
+        return result;
+    }
 }
