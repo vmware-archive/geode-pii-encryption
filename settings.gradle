@@ -1,4 +1,4 @@
-rootProject.name = 'GeodeEncryption'
+rootProject.name = 'GeodePIIEncryption'
 include 'crypto', 'model', 'common','encryption'
 project(':crypto')
 project(':model')

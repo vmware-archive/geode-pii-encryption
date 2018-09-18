@@ -11,7 +11,7 @@
         </disk-dirs>
     </disk-store>
 
-    <pdx read-serialized="true" persistent="true">
+    <pdx read-serialized="true" persistent="true" disk-store-name="custdiskstore">
         <pdx-serializer>
             <class-name>
                 org.apache.geode.pdx.ReflectionBasedAutoSerializer

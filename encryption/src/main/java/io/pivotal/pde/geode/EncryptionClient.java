@@ -41,6 +41,6 @@ public class EncryptionClient {
 start locator
 start server --cache-xml-file=/opt/gemfire/config/cache.xml
 
-query --query="select id, c.firstName, c.gender, c.creditCards[0].ccardNumber, c.creditCards[0].cvvCode, c.addresses[0].primary from /Customer c where c.id='66901a9f-3231-4baf-afef-69593f724046'"
+query --query="select id, c.firstName, c.gender, c.creditCards[0].ccardNumber, c.creditCards[0].cvvCode, c.addresses[0].primary from /Customer c where c.id='3b77aabc-de0e-4dbc-b2a2-bfc1da0caaaf'"
 
  */
