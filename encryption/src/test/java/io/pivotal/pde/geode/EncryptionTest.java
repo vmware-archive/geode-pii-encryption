@@ -26,8 +26,12 @@ public class EncryptionTest {
     @Autowired
     IGeodeService geodeService;
 
+    /**
+     * Test if the Customer record is after storing
+     *
+     */
     @Test
-    public void testEncryptDecrypt1() {
+    public void testEncryptDecryptCustomer() {
 
         Customer customer = DataUtil.createRandomCustomer();
         String key=customer.getId();
@@ -76,6 +80,9 @@ public class EncryptionTest {
     }
 
 
+    /**
+     *  Test OQL query
+     */
     @Test
     public void testQueryByFirstName() {
 
@@ -105,7 +112,7 @@ public class EncryptionTest {
         creditCard.setCcardNumber(creditCardNumber);
         creditCard.setCvvCode(cvv);
         geodeService.putCustomerData(customer);
-
+        // call the OQL query
         List<?> queryResults= geodeService.getCreditCardByFirstName(firstName);
         Object retObject=queryResults.get(0);
         List retCreditCards= (List) retObject;
@@ -116,13 +123,7 @@ public class EncryptionTest {
 
 
     }
-
-
-
-
-
-
-
+    
 }
 
 /*

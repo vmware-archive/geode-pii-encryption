@@ -12,7 +12,7 @@ public interface IGeodeService {
 
         public abstract Customer getCustomerData(String key);
 
-        public List<Object> queryAllCreditCards();
+        public List<Object> queryAllCustomers();
 
         List<Object> getCreditCardByFirstName(String firstName);
 

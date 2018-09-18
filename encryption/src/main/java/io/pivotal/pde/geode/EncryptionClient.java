@@ -27,7 +27,7 @@ public class EncryptionClient {
                 geodeService.putCustomerData(customer1);
                 geodeService.putCustomerData(customer2);
 
-                geodeService.queryAllCreditCards();
+                geodeService.queryAllCustomers();
 
             }
 

@@ -81,7 +81,7 @@ public class GeodeServiceImpl implements IGeodeService {
      * @throws QueryInvocationTargetException
      */
     @Override
-    public List<Object> queryAllCreditCards() {
+    public List<Object> queryAllCustomers() {
         List<Object> dataList= Collections.emptyList();
         try {
 
@@ -94,7 +94,7 @@ public class GeodeServiceImpl implements IGeodeService {
             for (Object obj : dataList) {
                 if (obj instanceof Customer) {
                     Customer gmData = (Customer) obj;
-                    System.out.println("Customer Object :  " + gmData.getId() + ", " + gmData.getFirstName() + " ");
+                    System.out.println("Customer Id :  " + gmData.getId() );
                 } else if (obj instanceof PdxInstance) {
                     PdxInstance gmPdxData = (PdxInstance) obj;
                     System.out.println("Customer Object :  " + gmPdxData.getField("id") + ", " + gmPdxData.getField("firstName"));
